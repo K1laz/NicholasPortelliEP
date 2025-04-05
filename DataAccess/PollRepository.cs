@@ -7,7 +7,7 @@ using Domain;
 
 namespace DataAccess
 {
-    class PollRepository
+    public class PollRepository
     {
         private readonly PollDbContext _context;
 
@@ -33,5 +33,19 @@ namespace DataAccess
             _context.Polls.Add(poll);
             _context.SaveChanges();
         }
+
+        public void CreatePoll(Poll poll)
+        {
+            CreatePoll(
+                poll.Title,
+                poll.Option1Text,
+                poll.Option2Text,
+                poll.Option3Text,
+                poll.Option1VotesCount,
+                poll.Option2VotesCount,
+                poll.Option3VotesCount
+            );
+        }
+
     }
 }

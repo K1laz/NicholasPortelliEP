@@ -3,6 +3,7 @@ using DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<PollRepository>();
 builder.Services.AddDbContext<PollDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PollDb")));
 
 // Add services to the container.
@@ -18,7 +19,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
