@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NicholasPortelliEPSolution", "NicholasPortelliEPSolution\NicholasPortelliEPSolution.csproj", "{50E7A313-E61F-4A63-8346-E902E04654B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{6C708434-085D-42DD-AF69-78B2DF7A4000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{D231C548-5331-4BB4-B6F9-51DB5F99950A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{50E7A313-E61F-4A63-8346-E902E04654B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50E7A313-E61F-4A63-8346-E902E04654B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50E7A313-E61F-4A63-8346-E902E04654B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C708434-085D-42DD-AF69-78B2DF7A4000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C708434-085D-42DD-AF69-78B2DF7A4000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C708434-085D-42DD-AF69-78B2DF7A4000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C708434-085D-42DD-AF69-78B2DF7A4000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D231C548-5331-4BB4-B6F9-51DB5F99950A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D231C548-5331-4BB4-B6F9-51DB5F99950A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D231C548-5331-4BB4-B6F9-51DB5F99950A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D231C548-5331-4BB4-B6F9-51DB5F99950A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,14 +4,89 @@
     "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution.csproj": {}
   },
   "projects": {
-    "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution.csproj": {
+    "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution.csproj",
-        "projectName": "NicholasPortelliEPSolution",
-        "projectPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution.csproj",
+        "projectUniqueName": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\enpor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\obj\\",
+        "outputPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\enpor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\enpor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\enpor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +114,73 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution.csproj",
+        "projectName": "NicholasPortelliEPSolution",
+        "projectPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution.csproj",
+        "packagesPath": "C:\\Users\\enpor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\enpor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\enpor\\OneDrive\\Desktop\\NicholasPortelliEPSolution\\NicholasPortelliEPSolution\\DataAccess\\DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

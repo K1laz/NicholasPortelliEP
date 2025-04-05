@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using DataAccess;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<PollDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PollDb")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
