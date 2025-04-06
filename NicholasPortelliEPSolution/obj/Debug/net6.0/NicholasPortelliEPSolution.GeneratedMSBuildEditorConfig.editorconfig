@@ -28,8 +28,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/enpor/OneDrive/Desktop/NicholasPortelliEPSolution/NicholasPortelliEPSolution/NicholasPortelliEPSolution/Views/Poll/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbFxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/enpor/OneDrive/Desktop/NicholasPortelliEPSolution/NicholasPortelliEPSolution/NicholasPortelliEPSolution/Views/Poll/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbFxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/enpor/OneDrive/Desktop/NicholasPortelliEPSolution/NicholasPortelliEPSolution/NicholasPortelliEPSolution/Views/Poll/Vote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbFxWb3RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/enpor/OneDrive/Desktop/NicholasPortelliEPSolution/NicholasPortelliEPSolution/NicholasPortelliEPSolution/Views/Shared/Error.cshtml]

@@ -1,0 +1,19 @@
+﻿@model List<Domain.Poll>
+<a asp-action="Create">Create Poll</a>
+
+<h2>All Polls</h2>
+
+@foreach (var poll in Model)
+{
+    <div style="margin-bottom: 20px;">
+        <h4>@poll.Title</h4>
+        <p>
+            <strong>Option 1:</strong> @poll.Option1Text (Votes: @poll.Option1VotesCount) <br />
+            <strong>Option 2:</strong> @poll.Option2Text (Votes: @poll.Option2VotesCount) <br />
+            <strong>Option 3:</strong> @poll.Option3Text (Votes: @poll.Option3VotesCount) <br />
+            <em>Created on: @poll.DateCreated.ToString("g")</em>
+        </p>
+
+        <a asp-action="Vote" asp-route-id="@poll.Id" class="btn btn-primary">Vote</a>
+    </div>
+}
