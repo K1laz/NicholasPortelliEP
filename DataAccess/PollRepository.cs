@@ -47,5 +47,17 @@ namespace DataAccess
             );
         }
 
+        public IQueryable<Poll> GetPolls()
+        {
+            return _context.Polls;
+        }
+
+        public void Vote(Poll poll)
+        {
+            _context.Polls.Update(poll);
+            _context.SaveChanges();
+        }
+
+
     }
 }
