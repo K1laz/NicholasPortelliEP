@@ -13,15 +13,11 @@ namespace Presentation.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(
-            Poll poll,
-            [FromServices] PollRepository dbRepo,
-            [FromServices] PollFileRepository fileRepo)
+        public IActionResult Create(Poll poll, [FromServices] IPollRepository repo)
         {
             if (ModelState.IsValid)
             {
-                dbRepo.CreatePoll(poll);   // Save to DB
-                fileRepo.CreatePoll(poll); // Save to JSON file
+                repo.CreatePoll(poll);  // Works with both DB or File based on Program.cs
                 return RedirectToAction("Success");
             }
 
@@ -33,7 +29,7 @@ namespace Presentation.Controllers
             return View();
         }
 
-        public IActionResult Index([FromServices] PollRepository repo)
+        public IActionResult Index([FromServices] IPollRepository repo)
         {
             var polls = repo.GetPolls()
                 .OrderByDescending(p => p.DateCreated)
@@ -42,7 +38,7 @@ namespace Presentation.Controllers
             return View(polls);
         }
 
-        public IActionResult Vote(int id, [FromServices] PollRepository repo)
+        public IActionResult Vote(int id, [FromServices] IPollRepository repo)
         {
             var poll = repo.GetPolls().FirstOrDefault(p => p.Id == id);
 
@@ -53,11 +49,11 @@ namespace Presentation.Controllers
         }
 
         [HttpPost]
-        public IActionResult SubmitVote(int id, int selectedOption, [FromServices] PollRepository repo)
+        public IActionResult SubmitVote(int id, int selectedOption, [FromServices] IPollRepository repo)
         {
             var poll = repo.GetPolls().FirstOrDefault(p => p.Id == id);
             if (poll == null) return NotFound();
-            
+
             // Increase vote count based on selected option
             switch (selectedOption)
             {
@@ -69,6 +65,14 @@ namespace Presentation.Controllers
 
             repo.Vote(poll);
             return RedirectToAction("Success");
+        }
+
+        public IActionResult Results(int id, [FromServices] IPollRepository repo)
+        {
+            var poll = repo.GetPolls().FirstOrDefault(p => p.Id == id);
+            if (poll == null) return NotFound();
+
+            return View(poll); // This points to Views/Poll/Results.cshtml
         }
 
     }

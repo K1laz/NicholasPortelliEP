@@ -8,12 +8,15 @@
     <div style="margin-bottom: 20px;">
         <h4>@poll.Title</h4>
         <p>
-            <strong>Option 1:</strong> @poll.Option1Text (Votes: @poll.Option1VotesCount) <br />
-            <strong>Option 2:</strong> @poll.Option2Text (Votes: @poll.Option2VotesCount) <br />
-            <strong>Option 3:</strong> @poll.Option3Text (Votes: @poll.Option3VotesCount) <br />
+            <strong>Option 1</strong><br />
+            <strong>Option 2</strong><br />
+            <strong>Option 3</strong><br />
             <em>Created on: @poll.DateCreated.ToString("g")</em>
         </p>
 
         <a asp-action="Vote" asp-route-id="@poll.Id" class="btn btn-primary">Vote</a>
+        <form asp-action="Results" asp-route-id="@poll.Id" method="get" style="display:inline">
+            <button type="submit" class="btn btn-info">View Results</button>
+        </form>
     </div>
 }

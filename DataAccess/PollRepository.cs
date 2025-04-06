@@ -7,7 +7,7 @@ using Domain;
 
 namespace DataAccess
 {
-    public class PollRepository
+    public class PollRepository : IPollRepository
     {
         private readonly PollDbContext _context;
 
@@ -47,10 +47,11 @@ namespace DataAccess
             );
         }
 
-        public IQueryable<Poll> GetPolls()
+        public IEnumerable<Poll> GetPolls()
         {
-            return _context.Polls;
+            return _context.Polls.ToList();
         }
+
 
         public void Vote(Poll poll)
         {

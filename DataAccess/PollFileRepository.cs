@@ -6,7 +6,7 @@ using Domain;
 
 namespace DataAccess
 {
-    public class PollFileRepository
+    public class PollFileRepository : IPollRepository
     {
         private readonly string _filePath = Path.Combine(Directory.GetCurrentDirectory(), "polls.json");
 
@@ -29,13 +29,28 @@ namespace DataAccess
             File.WriteAllText(_filePath, updatedJson);
         }
 
-        public List<Poll> GetPolls()
+        public IEnumerable<Poll> GetPolls()
         {
             if (!File.Exists(_filePath))
                 return new List<Poll>();
 
             string json = File.ReadAllText(_filePath);
             return JsonSerializer.Deserialize<List<Poll>>(json) ?? new List<Poll>();
+        }
+
+        public void Vote(Poll poll)
+        {
+            var polls = GetPolls();
+            var existing = polls.FirstOrDefault(p => p.Id == poll.Id);
+            if (existing != null)
+            {
+                existing.Option1VotesCount = poll.Option1VotesCount;
+                existing.Option2VotesCount = poll.Option2VotesCount;
+                existing.Option3VotesCount = poll.Option3VotesCount;
+
+                string json = JsonSerializer.Serialize(polls, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(_filePath, json);
+            }
         }
     }
 }

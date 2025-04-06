@@ -1,10 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using DataAccess;
+using Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<PollRepository>();
-builder.Services.AddSingleton<PollFileRepository>();
+//Comment one or the other to display data from database or json file
+builder.Services.AddScoped<IPollRepository, PollRepository>(); //Datasbe
+//builder.Services.AddSingleton<IPollRepository, PollFileRepository>(); //Json
 builder.Services.AddDbContext<PollDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PollDb")));
 
 // Add services to the container.
@@ -29,6 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Poll}/{action=Index}/{id?}");
 
 app.Run();

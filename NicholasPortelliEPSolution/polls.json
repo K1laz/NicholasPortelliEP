@@ -17,8 +17,19 @@
     "Option2Text": "2",
     "Option3Text": "3",
     "Option1VotesCount": 0,
-    "Option2VotesCount": 0,
+    "Option2VotesCount": 1,
     "Option3VotesCount": 0,
     "DateCreated": "2025-04-06T17:59:59.2270029+02:00"
+  },
+  {
+    "Id": 3,
+    "Title": "New Poll",
+    "Option1Text": "1",
+    "Option2Text": "2",
+    "Option3Text": "3",
+    "Option1VotesCount": 0,
+    "Option2VotesCount": 0,
+    "Option3VotesCount": 0,
+    "DateCreated": "2025-04-06T19:43:34.0466736+02:00"
   }
 ]
