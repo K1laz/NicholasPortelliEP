@@ -13,11 +13,15 @@ namespace Presentation.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Poll poll, [FromServices] PollRepository repo)
+        public IActionResult Create(
+            Poll poll,
+            [FromServices] PollRepository dbRepo,
+            [FromServices] PollFileRepository fileRepo)
         {
             if (ModelState.IsValid)
             {
-                repo.CreatePoll(poll);
+                dbRepo.CreatePoll(poll);   // Save to DB
+                fileRepo.CreatePoll(poll); // Save to JSON file
                 return RedirectToAction("Success");
             }
 
@@ -53,7 +57,7 @@ namespace Presentation.Controllers
         {
             var poll = repo.GetPolls().FirstOrDefault(p => p.Id == id);
             if (poll == null) return NotFound();
-
+            
             // Increase vote count based on selected option
             switch (selectedOption)
             {

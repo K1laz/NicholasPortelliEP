@@ -67,3 +67,4 @@ C:\Users\enpor\OneDrive\Desktop\NicholasPortelliEPSolution\NicholasPortelliEPSol
 C:\Users\enpor\OneDrive\Desktop\NicholasPortelliEPSolution\NicholasPortelliEPSolution\NicholasPortelliEPSolution\obj\Debug\net6.0\ref\NicholasPortelliEPSolution.dll
 C:\Users\enpor\OneDrive\Desktop\NicholasPortelliEPSolution\NicholasPortelliEPSolution\NicholasPortelliEPSolution\bin\Debug\net6.0\Humanizer.dll
 C:\Users\enpor\OneDrive\Desktop\NicholasPortelliEPSolution\NicholasPortelliEPSolution\NicholasPortelliEPSolution\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\enpor\OneDrive\Desktop\NicholasPortelliEPSolution\NicholasPortelliEPSolution\NicholasPortelliEPSolution\bin\Debug\net6.0\polls.json

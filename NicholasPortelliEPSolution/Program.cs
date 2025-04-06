@@ -4,6 +4,7 @@ using DataAccess;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<PollRepository>();
+builder.Services.AddSingleton<PollFileRepository>();
 builder.Services.AddDbContext<PollDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("PollDb")));
 
 // Add services to the container.
