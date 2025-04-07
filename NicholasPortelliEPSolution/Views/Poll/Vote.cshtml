@@ -1,4 +1,11 @@
 ﻿@model Domain.Poll
+@{
+    var alreadyVoted = Context.Session.GetString("AlreadyVoted") == "true";
+    if (alreadyVoted)
+    {
+        Context.Session.Remove("AlreadyVoted");
+    }
+}
 
 <h2>Vote on: @Model.Title</h2>
 
@@ -22,5 +29,14 @@
 
     <button type="submit">Submit Vote</button>
 </form>
+
+@if (ViewBag.AlreadyVoted != null && (bool)ViewBag.AlreadyVoted)
+{
+<script>
+    window.onload = function () {
+        alert("You have already voted on this poll.");
+    };
+</script>
+}
 
 <a asp-action="Index">Back to All Polls</a>

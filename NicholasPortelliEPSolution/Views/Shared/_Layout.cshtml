@@ -21,12 +21,33 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Poll" asp-action="Index">Polls</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-controller="Poll" asp-action="Create">Create Poll</a>
                         </li>
                     </ul>
+
+                    <!--Login-->
+                    <div class="d-flex align-items-center">
+                        @{
+                            var username = Context.Session.GetString("Username");
+                        }
+
+                        @if (string.IsNullOrEmpty(username))
+                        {
+                            <form asp-controller="Login" asp-action="Index" method="get" class="d-inline">
+                                <button type="submit" class="btn btn-outline-primary btn-sm">Login</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span class="me-2 text-dark">@username</span>
+                            <form asp-controller="Login" asp-action="Logout" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                            </form>
+                        }
+                    </div>
                 </div>
             </div>
         </nav>

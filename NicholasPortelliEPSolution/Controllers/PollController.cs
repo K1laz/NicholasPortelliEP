@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Domain;
 using DataAccess;
+using Presentation.Filters;
 
 namespace Presentation.Controllers
 {
@@ -45,10 +46,19 @@ namespace Presentation.Controllers
             if (poll == null)
                 return NotFound();
 
+            var alreadyVoted = HttpContext.Session.GetString("AlreadyVoted");
+            if (alreadyVoted == "true")
+            {
+                ViewBag.AlreadyVoted = true;
+                HttpContext.Session.Remove("AlreadyVoted");
+            }
+
+
             return View(poll);
         }
 
         [HttpPost]
+        [VoteOnlyOnce]
         public IActionResult SubmitVote(int id, int selectedOption, [FromServices] IPollRepository repo)
         {
             var poll = repo.GetPolls().FirstOrDefault(p => p.Id == id);
